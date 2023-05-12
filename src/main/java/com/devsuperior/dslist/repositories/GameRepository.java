@@ -10,6 +10,7 @@ import com.devsuperior.dslist.projections.GameMinProjection;
 
 public interface GameRepository extends JpaRepository<Game, Long> {
 
+	// Consulta personalizada SQL//
 	@Query(nativeQuery = true, value = """
 			SELECT tb_game.id, tb_game.title, tb_game.game_year AS `year`, tb_game.img_url AS imgUrl,
 			tb_game.short_description AS shortDescription, tb_belonging.position
@@ -18,6 +19,7 @@ public interface GameRepository extends JpaRepository<Game, Long> {
 			WHERE tb_belonging.list_id = :listId
 			ORDER BY tb_belonging.position
 				""")
+	// Método que retorna uma consulta personalizada do tipo GameMinProjection por ID //
 	List<GameMinProjection> searchsearchByList(Long listId);
 
 }
