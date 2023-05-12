@@ -30,7 +30,7 @@ public class GameService {
 		List<Game> result = gameRepository.findAll();
 		return result.stream().map(x -> new GameMinDTO(x)).toList();
 	}
-	
+	//Método que devolve um GameMinDTO buscando por ID em uma lista de games, os games que estão associados a ela//
 	@Transactional(readOnly = true)
 	public List<GameMinDTO> findByList(Long listId) {
 		List<GameMinProjection> result = gameRepository.searchsearchByList(listId);

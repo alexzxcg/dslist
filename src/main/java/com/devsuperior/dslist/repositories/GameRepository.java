@@ -19,7 +19,7 @@ public interface GameRepository extends JpaRepository<Game, Long> {
 			WHERE tb_belonging.list_id = :listId
 			ORDER BY tb_belonging.position
 				""")
-	// Método que retorna uma consulta personalizada do tipo GameMinProjection por ID //
+	// Função que retorna uma lista com consulta personalizada SQL do tipo GameMinProjection por ID //
 	List<GameMinProjection> searchsearchByList(Long listId);
 
 }
