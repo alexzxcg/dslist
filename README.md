@@ -32,3 +32,25 @@ dentro da linguagem Java ultilizando o framework SpringBoot.
   - Postgress
 
 ## Sistemas Web
+![Imagem do WhatsApp de 2024-02-23 à(s) 18 38 46_7a74eb28](https://github.com/alexzxcg/dslist/assets/80990365/66066919-bcb7-4aa7-abd6-0ab8339038c1)
+
+## API Rest
+![Imagem do WhatsApp de 2024-02-23 à(s) 18 39 29_f2fbda0c](https://github.com/alexzxcg/dslist/assets/80990365/fff7bcef-73e1-4245-a965-cb578edbde62)
+
+## Padrão de Camadas
+![Imagem do WhatsApp de 2024-02-23 à(s) 18 40 12_1cc9eca4](https://github.com/alexzxcg/dslist/assets/80990365/194f8343-456b-41fb-b9ec-68e4e1261c52)
+
+## End-Points
+  - GET http://localhost:8080/lists
+  - GET http://localhost:8080/lists/1/games
+  - GET http://localhost:8080/lists/2/games
+  - GET http://localhost:8080/game
+  - GET http://localhost:8080/game/1
+  - POST http://localhost:8080/lists/1/replacement
+    ~~~~
+    {
+      "sourceIndex": 1,
+      "destinationIndex": 4
+    }
+
+
