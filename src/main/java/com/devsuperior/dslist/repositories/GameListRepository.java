@@ -4,6 +4,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 
+import com.devsuperior.dslist.dto.GameListDTO;
 import com.devsuperior.dslist.entities.GameList;
 
 public interface GameListRepository extends JpaRepository<GameList, Long>{
@@ -14,5 +15,7 @@ public interface GameListRepository extends JpaRepository<GameList, Long>{
 	
 	//Função que dado um ID da lista de games e dado um ID de um game, atualiza a sua posição dentro da lista de games//
 	void updateBelongingPosition(Long listId, Long gameId, Integer newPosition);
+
+	GameListDTO save(GameListDTO obj);
 
 }
